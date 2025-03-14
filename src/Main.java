@@ -7,16 +7,21 @@ public class Main {
         Persona p4= new Persona("juliana ","Rodriguez",18);
 
         System.out.println("persona 1");
+        p1.numero_registro();
         p1.mostrar_datos();
         p1.mayor_edad();
         System.out.println("persona 2");
+        p2.numero_registro();
         p2.mostrar_datos();
         p2.mayor_edad();
         System.out.println("persona 3");
+        p3.numero_registro();
         p3.mostrar_datos();
         p3.mayor_edad();
         System.out.println("persona 4");
+        p4.numero_registro();
         p4.mostrar_datos();
         p4.mayor_edad();
+
     }
 }

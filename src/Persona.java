@@ -1,7 +1,10 @@
+import java.util.Random;
+
 public class Persona {
-    private String nombre ;
+    private String nombre;
     private String apellido;
     private int edad;
+    private int n_registro;
 
     public Persona() {
     }
@@ -24,6 +27,10 @@ public class Persona {
         return edad;
     }
 
+    public int getN_registro() {
+        return n_registro;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -35,15 +42,23 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    public void mostrar_datos(){
-        System.out.println("nombre: " +nombre+" apellido: "+ apellido+" edad: " +edad);
+
+    public void numero_registro() {
+        Random ale = new Random();
+        this.n_registro=ale.nextInt((9999 - 1000+1))+1000;
+        System.out.println(n_registro);
+        System.out.println("Número de registro asignado: " + n_registro);
     }
-    public void mayor_edad(){
-        if (edad<18){
-            System.out.println("es menor de edad con: "+edad +" años");
-        }
-        else{
-            System.out.println("es mayor de edad con: "+ edad+ " años");
+
+    public void mostrar_datos() {
+        System.out.println("Nombre: " + nombre + ", Apellido: " + apellido + ", Edad: " + edad );
+    }
+
+    public void mayor_edad() {
+        if (edad < 18) {
+            System.out.println(nombre + " es menor de edad con " + edad + " años.");
+        } else {
+            System.out.println(nombre + " es mayor de edad con " + edad + " años.");
         }
     }
 }
